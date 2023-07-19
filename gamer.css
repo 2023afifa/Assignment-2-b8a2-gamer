@@ -18,7 +18,7 @@ body {
 }
 
 /* Navigation section */
-.navigation {
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -293,4 +293,77 @@ footer p {
     font-weight: 500;
     margin-top: 30px;
     padding-bottom: 130px;
+}
+
+/* Responsive media query for small devices */
+@media screen and (max-width: 576px){
+    nav, .nav-menu ul, .first-section{
+        flex-direction: column;
+    }
+    header{
+        margin-top: 80px;
+        padding-top: 50px;
+        height: 1000px;
+        flex-direction: column-reverse;
+    }
+    .header-section {
+        padding: 20px;
+    }
+    .first-section img{
+        width: 100%;
+    }
+    .first-section-div{
+        text-align: center;
+    }
+    .first-section-div p {
+        width: 400px;
+        margin: 10px;
+    }
+
+    .second-section-div{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .third-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .third-section h2, .third-section p{
+        text-align: center;
+    }
+    .third-section-image1{
+        margin-left: 10px;
+        height: 380px;
+        width: 360px;
+    }
+    .third-section-image2{
+        height: 180px;
+        width: 135px;
+        left: 0px;
+        top: 5600px;
+    }
+    
+    .sixth-section-div1, .sixth-section-div2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 10px;
+    }
+    .sixth-section .images{
+        margin-bottom: 10px;
+    }
+
+    .footer-ul1{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-section-div2{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-left: 60px; 
+    }
+    .footer-ul2 ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
