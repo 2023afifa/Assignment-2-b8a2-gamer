@@ -7,6 +7,13 @@ body {
     color: #FF42A5;
 }
 
+.gradient {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .pink-button {
     background-color: #FF42A5;
     padding: 18px 40px;
@@ -76,8 +83,6 @@ header {
 }
 
 .header-section h1 {
-    color: #F948B2, #8758F1;
-    color: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     font-size: 95px;
     font-weight: 800;
     margin-top: 0px;
@@ -172,6 +177,16 @@ header {
     justify-content: center;
 }
 
+/* .second-section-div .image-hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+} */
+
 .second-section-div p {
     color: #534C64;
     width: 342px;
@@ -185,7 +200,7 @@ header {
     display: flex;
     justify-content: space-around;
     margin-top: 120px;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
 }
 
 .third-section h2 {
@@ -205,19 +220,16 @@ header {
     width: 353px;
 }
 
-.third-section-image1 {
+.third-section-div2 {
     position: relative;
-}
-
-.third-section-image2 {
-    position: absolute;
-    top: 2550px;
-    left: 750px;
+    bottom: 150px;
+    right: 100px;
 }
 
 /* Sixth section */
 .sixth-section {
     margin: 100px;
+
 }
 
 .sixth-section-div1 {
@@ -235,8 +247,14 @@ header {
     display: flex;
 }
 
+.sixth-section .images:hover{
+    color: #FF42A5;
+    border: 2px solid #FF42A5;
+    border-radius: 50px;
+}
+
 .sixth-section p {
-    width: 215px;
+    width: 180px;
 }
 
 /* footer */
@@ -296,74 +314,149 @@ footer p {
 }
 
 /* Responsive media query for small devices */
-@media screen and (max-width: 576px){
-    nav, .nav-menu ul, .first-section{
+@media screen and (max-width: 576px) {
+
+    nav,
+    .nav-menu ul,
+    .first-section {
         flex-direction: column;
     }
-    header{
+
+    header {
         margin-top: 80px;
         padding-top: 50px;
         height: 1000px;
         flex-direction: column-reverse;
     }
+
     .header-section {
         padding: 20px;
     }
-    .first-section img{
+
+    .first-section img {
         width: 100%;
     }
-    .first-section-div{
+
+    .first-section-div {
         text-align: center;
     }
+
     .first-section-div p {
         width: 400px;
         margin: 10px;
     }
 
-    .second-section-div{
+    .second-section-div {
         flex-direction: column;
         align-items: center;
         margin-top: 100px;
     }
-    .third-section{
+
+    .third-section {
         flex-direction: column;
         align-items: center;
     }
-    .third-section h2, .third-section p{
+
+    .third-section h2,
+    .third-section p {
         text-align: center;
     }
-    .third-section-image1{
-        margin-left: 10px;
+
+    .third-section-div1 > img {
+        margin-left: 20px;
         height: 380px;
         width: 360px;
     }
-    .third-section-image2{
-        height: 180px;
-        width: 135px;
-        left: 0px;
-        top: 5600px;
+
+    .third-section-div2 > img{
+        height: 145px;
+        width: 100px;
+        margin-left: 80px;
+        top: 50px;
+        position: relative;
     }
-    
-    .sixth-section-div1, .sixth-section-div2{
+
+    .sixth-section-div1,
+    .sixth-section-div2 {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         margin-bottom: 10px;
     }
-    .sixth-section .images{
+
+    .sixth-section .images {
         margin-bottom: 10px;
     }
 
-    .footer-ul1{
+    .footer-ul1 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-    .footer-section-div2{
+
+    .footer-section-div2 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding-left: 60px; 
+        padding-left: 60px;
     }
-    .footer-ul2 ul{
+
+    .footer-ul2 ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive media query for medium devices */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    nav{
+        width: 992px;
+    }
+    .nav-logo{
+        margin-left: 70px;
+    }
+    header{
+        flex-direction: column;
+        margin-top: 100px;
+        height: 100%;
+        width: 992px;
+    }
+    .header-section{
+        text-align: center;
+    }
+    .first-section{
+        flex-direction: column-reverse;
+    }
+    .first-section-div p{
+        margin-left: 180px;
+    }
+
+    .second-section{
+        margin-left: 300px;
+    }
+    .second-section-div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .third-section{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .third-section p{
+        margin-left: 350px;
+    }
+    .third-section-div1{
+        margin-left: 300px;
+    }
+
+    .sixth-section-div1, .sixth-section-div2{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+    }
+    .sixth-section .images{
+        margin-bottom: 20px;
+    }
+
+    footer{
+        width: 992px;
     }
 }
