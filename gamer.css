@@ -288,6 +288,41 @@ footer p {
     padding-bottom: 130px;
 }
 
+/* Image overlay effects */
+.image-hover-effect{
+    position: relative;
+    width: 300px;
+}
+
+.image-hover{
+    display:block;
+    width: 100%;
+}
+
+.image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #FF42A5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.image-overlay:hover{
+    opacity: 1;
+}
+
+.image-title{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
 /* Responsive media query for small devices */
 @media screen and (max-width: 576px) {
 
